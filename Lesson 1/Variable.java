@@ -1,6 +1,6 @@
 public class Variable {
-    
-    public static void main(String[]args){
+
+    public static void main(String[]args) {
         byte core = 4;
         short typeSystem = 64;
         int processor = 7310;
