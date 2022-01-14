@@ -15,14 +15,14 @@ public class Cycle {
         
         System.out.println(" ");
 
-        int numbers = 10;
+        number = 10;
         int sumOdd = 0;
         do {
-            if (numbers % 2 == 1) {
-                sumOdd += numbers;
+            if (number % 2 == 1) {
+                sumOdd += number;
              }            
-            numbers++;
-        } while (numbers < 20);
+            number++;
+        } while (number < 20);
         System.out.println(sumOdd);
     }    
 }
