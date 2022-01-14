@@ -1,8 +1,8 @@
 public class Unicode {
 
     public static void main(String[] args) {
-        for (char unicodeSymbol = 9398; unicodeSymbol <= 10178; unicodeSymbol++) {
-            System.out.println(unicodeSymbol);
+        for (char symbol = 9398; symbol <= 10178; symbol++) {
+            System.out.println(symbol);
         }
     }
 }
