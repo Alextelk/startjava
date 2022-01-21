@@ -14,7 +14,7 @@ public class Person {
         return "sit";
     }
 
-    void action() {
+    void run() {
         System.out.println("Побежал");
     }
 
