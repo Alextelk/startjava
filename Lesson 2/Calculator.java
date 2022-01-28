@@ -44,6 +44,7 @@ public class Calculator{
             break;
         case '%':
             System.out.println(firstNumber % secondNumber);
+            break;
         case '^':
             int result = 1;
             for(int i = 1; i <= secondNumber; i++) {
