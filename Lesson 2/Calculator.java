@@ -1,4 +1,4 @@
-public class Calculator{
+public class Calculator {
 
     private int firstNumber;
     private char mathOperation;
@@ -28,33 +28,33 @@ public class Calculator{
         this.secondNumber = secondNumber;
     }
 
-    public void calculation (int firstNumber, char mathOperation, int secondNumber) {
+    public void calculation () {
         switch(mathOperation) {
-        case '+':
-            System.out.println(firstNumber + secondNumber);
-            break;
-        case '-':
-            System.out.println(firstNumber - secondNumber);
-            break;
-        case '*':
-            System.out.println(firstNumber * secondNumber);
-            break;
-        case '/':
-            System.out.println(firstNumber / secondNumber);
-            break;
-        case '%':
-            System.out.println(firstNumber % secondNumber);
-            break;
-        case '^':
-            int result = 1;
-            for(int i = 1; i <= secondNumber; i++) {
-                result *= firstNumber;
-            }
-            System.out.println(result);
-            break;
-        default:
-            System.out.println("Такой операции нет");
-            break;
+            case '+':
+                System.out.println(firstNumber + secondNumber);
+                break;
+            case '-':
+                System.out.println(firstNumber - secondNumber);
+                break;
+            case '*':
+                System.out.println(firstNumber * secondNumber);
+                break;
+            case '/':
+                System.out.println(firstNumber / secondNumber);
+                break;
+            case '%':
+                System.out.println(firstNumber % secondNumber);
+                break;
+            case '^':
+                int result = 1;
+                for(int i = 1; i <= secondNumber; i++) {
+                    result *= firstNumber;
+                }
+                System.out.println(result);
+                break;
+            default:
+                System.out.println("Такой операции нет");
+                break;
         }
     }
 }
