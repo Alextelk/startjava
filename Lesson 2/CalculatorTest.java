@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class CalculatorTest{
+public class CalculatorTest {
 
     public static void main(String[] args) {
         Calculator calculator = new Calculator();
@@ -17,19 +17,17 @@ public class CalculatorTest{
             System.out.println("Введите второе число");
             calculator.setSecondNumber(scanner.nextInt());
 
-            calculator.calculation(calculator.getFirstNumber(), calculator.getMathOperation(), calculator.getSecondNumber());
+            calculator.calculation();
 
-            scanner.nextLine();
             System.out.println("Хотите продолжить вычисления yes/no?");
+            scanner.nextLine();
             repeat = scanner.nextLine();
             if(repeat.equals("yes")) {
-                System.out.println("");
-            } else if(repeat.equals("no")) {
-                break;
+                System.out.println(" ");
             } else {
                 System.out.println("Введите yes/no");
                 repeat = scanner.nextLine();
             }
-        } while(true);
+        } while(!(repeat.equals("no")));
     }
 }
