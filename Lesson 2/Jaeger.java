@@ -5,6 +5,13 @@ public class Jaeger {
     private int strength;
     private int armor;
 
+    public Jaeger(String modelName, String mark, int strength, int armor) {
+        this.modelName = modelName;
+        this.mark = mark;
+        this.strength = strength;
+        this.armor = armor;
+    }
+
     public String getModelName() {
         return modelName;
     }
