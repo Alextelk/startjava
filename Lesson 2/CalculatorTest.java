@@ -5,7 +5,7 @@ public class CalculatorTest {
     public static void main(String[] args) {
         Calculator calculator = new Calculator();
         Scanner scanner = new Scanner(System.in);
-        String repeat;
+        String option;
         do {
             System.out.println("Введите первое число");
             calculator.setFirstNumber(scanner.nextInt());
@@ -17,17 +17,15 @@ public class CalculatorTest {
             System.out.println("Введите второе число");
             calculator.setSecondNumber(scanner.nextInt());
 
-            calculator.calculation();
+            calculator.calculate();
 
             System.out.println("Хотите продолжить вычисления yes/no?");
             scanner.nextLine();
-            repeat = scanner.nextLine();
-            if(repeat.equals("yes")) {
-                System.out.println(" ");
-            } else {
+            option = scanner.nextLine();
+            while(!option.equals("no") && !option.equals("yes")) {
                 System.out.println("Введите yes/no");
-                repeat = scanner.nextLine();
+                option = scanner.nextLine();
             }
-        } while(!(repeat.equals("no")));
+        } while(!option.equals("no"));
     }
-}
+} 
