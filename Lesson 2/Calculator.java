@@ -4,31 +4,19 @@ public class Calculator {
     private char mathOperation;
     private int secondNumber;
 
-    public int getFirstNumber() {
-        return firstNumber;
-    }
-
     public void setFirstNumber(int firstNumber) {
         this.firstNumber = firstNumber;
-    }
-
-    public char getMathOperation() {
-        return mathOperation;
     }
 
     public void setMathOperation(char mathOperation) {
         this.mathOperation = mathOperation;
     }
 
-    public int getSecondNumber() {
-        return secondNumber;
-    }
-
     public void setSecondNumber(int secondNumber) {
         this.secondNumber = secondNumber;
     }
 
-    public void calculation () {
+    public void calculate() {
         switch(mathOperation) {
             case '+':
                 System.out.println(firstNumber + secondNumber);
