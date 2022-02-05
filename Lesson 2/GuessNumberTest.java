@@ -19,9 +19,6 @@ public class GuessNumberTest {
                 System.out.println("Хотите повторить? yes/no");
                 option = scan.nextLine();
             } while(!option.equals("no") && !option.equals("yes"));
-            if(option.equals("no")) {
-                break;
-            }
-        } while(true); 
+        } while(!option.equals("no")); 
     }
 }
