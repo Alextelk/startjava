@@ -15,12 +15,13 @@ public class GuessNumberTest {
         String option;
         do {
             game.start();
-            System.out.println("Хотите повторить? yes/no");
-            option = scan.nextLine();
-            while(!option.equals("no") && !option.equals("yes")) {
-            System.out.println("Введите yes/no");
-            option = scan.nextLine();
+            do {
+                System.out.println("Хотите повторить? yes/no");
+                option = scan.nextLine();
+            } while(!option.equals("no") && !option.equals("yes"));
+            if(option.equals("no")) {
+                break;
             }
-        } while(!option.equals("no"));
+        } while(true); 
     }
 }
