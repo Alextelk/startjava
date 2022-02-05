@@ -15,9 +15,7 @@ public class GuessNumber {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
         int randomNumber;
-        do {
-            randomNumber = random.nextInt((100) + 1);
-        } while(randomNumber == 0);
+        randomNumber = random.nextInt(100) + 1;
         int number;
         System.out.println("\n" + "Я загадал число от 0 до 100, попробуй угадать");
         do {
