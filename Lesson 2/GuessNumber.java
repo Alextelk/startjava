@@ -14,7 +14,10 @@ public class GuessNumber {
     public void start() {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
-        int randomNumber = random.nextInt((100) + 1);
+        int randomNumber;
+        do {
+            randomNumber = random.nextInt((100) + 1);
+        } while(randomNumber == 0);
         int number;
         System.out.println("\n" + "Я загадал число от 0 до 100, попробуй угадать");
         do {
@@ -28,6 +31,7 @@ public class GuessNumber {
                 System.out.println(firstPlayer.getName());
                 break;
             }
+
             System.out.println("\n" + secondPlayer.getName() + ", введите число");
             number = scanner.nextInt();
             if (number > randomNumber) {
