@@ -1,3 +1,5 @@
+package com.startjava.lesson_2_3.calculator;
+
 import java.util.Scanner;
 
 public class CalculatorTest {
@@ -22,7 +24,7 @@ public class CalculatorTest {
             System.out.println("Хотите продолжить вычисления yes/no?");
             scanner.nextLine();
             option = scanner.nextLine();
-            while(!option.equals("no") && !option.equals("yes")) {
+            while(!option.equals("yes") && !option.equals("no")) {
                 System.out.println("Введите yes/no");
                 option = scanner.nextLine();
             }
