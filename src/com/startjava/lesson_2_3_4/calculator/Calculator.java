@@ -7,18 +7,6 @@ public class Calculator {
     private int secondNumber;
     private String expression;
 
-    public void setFirstNumber(int firstNumber) {
-        this.firstNumber = firstNumber;
-    }
-
-    public void setMathOperation(char mathOperation) {
-        this.mathOperation = mathOperation;
-    }
-
-    public void setSecondNumber(int secondNumber) {
-        this.secondNumber = secondNumber;
-    }
-
     public void setExpression(String expression) {
         this.expression = expression;
     }
