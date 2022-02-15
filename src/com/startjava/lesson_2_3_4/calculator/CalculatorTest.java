@@ -11,12 +11,7 @@ public class CalculatorTest {
         String option;
         do {
             System.out.println("Введите математическое выражение");
-            expression = scanner.nextLine();
-            String[] value = expression.split(" ");
-            calculator.setFirstNumber(Integer.parseInt(value[0]));
-            calculator.setMathOperation(value[1].charAt(0));
-            calculator.setSecondNumber(Integer.parseInt(value[2]));
-
+            calculator.setExpression(scanner.nextLine());
 
             calculator.calculate();
 
