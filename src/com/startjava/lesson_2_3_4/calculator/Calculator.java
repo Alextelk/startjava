@@ -7,38 +7,36 @@ public class Calculator {
     private int secondNumber;
     private String expression;
 
-    public void setExpression(String expression) {
-        this.expression = expression;
-    }
-
-    public void calculate() {
-        String[] example = expression.split(" ");
-        firstNumber = Integer.parseInt(example[0]);
-        mathOperation = example[1].charAt(0);
-        secondNumber = Integer.parseInt(example[2]);
+    int result;
+    public int calculate(String expression) {
+        String[] partsExpression = expression.split(" ");
+        firstNumber = Integer.parseInt(partsExpression[0]);
+        mathOperation = partsExpression[1].charAt(0);
+        secondNumber = Integer.parseInt(partsExpression[2]);
         switch(mathOperation) {
             case '+':
-                System.out.println(firstNumber + secondNumber);
+                result = (firstNumber + secondNumber);
                 break;
             case '-':
-                System.out.println(firstNumber - secondNumber);
+                result = (firstNumber - secondNumber);
                 break;
             case '*':
-                System.out.println(firstNumber * secondNumber);
+                result = (firstNumber * secondNumber);
                 break;
             case '/':
-                System.out.println(firstNumber / secondNumber);
+                result = (firstNumber / secondNumber);
                 break;
             case '%':
-                System.out.println(firstNumber % secondNumber);
+                result = (firstNumber % secondNumber);
                 break;
             case '^':
-                System.out.println(Math.pow(firstNumber, secondNumber));
+                result =(int) Math.pow(firstNumber, secondNumber);
                 break;
             default:
                 System.out.println("Такой операции нет");
                 break;
         }
+        return result;
     }
 }
 

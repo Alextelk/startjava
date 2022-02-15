@@ -7,13 +7,10 @@ public class CalculatorTest {
     public static void main(String[] args) {
         Calculator calculator = new Calculator();
         Scanner scanner = new Scanner(System.in);
-        String expression;
         String option;
         do {
             System.out.println("Введите математическое выражение");
-            calculator.setExpression(scanner.nextLine());
-
-            calculator.calculate();
+            System.out.println(calculator.calculate(scanner.nextLine()));
 
             System.out.println("Хотите продолжить вычисления yes/no?");
             scanner.nextLine();
