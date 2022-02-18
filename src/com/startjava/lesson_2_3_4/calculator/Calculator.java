@@ -9,7 +9,7 @@ public class Calculator {
         int secondNumber = Integer.parseInt(partsExpression[2]);
         switch(mathOperation) {
             case '+':
-                return  firstNumber + secondNumber;
+                return firstNumber + secondNumber;
             case '-':
                 return firstNumber - secondNumber;
             case '*':
@@ -26,4 +26,3 @@ public class Calculator {
         }
     }
 }
-
