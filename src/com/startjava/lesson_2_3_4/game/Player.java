@@ -20,7 +20,7 @@ public class Player {
         return Arrays.copyOf(numbers, count);
     }
 
-    public void setNumbers(int number) {
+    public void setEnteredNumber(int number) {
         numbers[count] = number;
         count++;
     }
@@ -34,6 +34,6 @@ public class Player {
     }
 
     public void arraysFill() {
-        Arrays.fill(numbers, 0, count, 0 );
+        Arrays.fill(numbers, 0, count, 0);
     }
 }

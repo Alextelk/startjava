@@ -7,34 +7,17 @@ public class GuessNumber {
 
     private Player firstPlayer;
     private Player secondPlayer;
+    private int number;
+    private int randomNumber;
 
     public GuessNumber(Player firstPlayer, Player secondPlayer) {
         this.firstPlayer = firstPlayer;
         this.secondPlayer = secondPlayer;
     }
-
     Scanner scanner = new Scanner(System.in);
 
-    public void enterNumPlayer(Player player) {
-        System.out.println("Игрок " + player.getName() + " введите число");
-        number = scanner.nextInt();
-        player.setNumbers(number);
-    }
 
-    public boolean numberCheck(Player player) {
-        if (number > randomNumber) {
-            System.out.println("Ваше число больше загаданного");
-            return false;
-        } else if (number < randomNumber) {
-            System.out.println("Ваше число меньше загаданного");
-            return false;
-        } else {
-            System.out.println("Ура, игрок " + player.getName() + " победил!");
-            return true;
-        }
-    }
-
-    public boolean countCheck(Player player) {
+    private boolean checkCount(Player player) {
         if(player.getCount() == 10) {
             System.out.println("У игрока " + player.getName() + " закончились попытки");
             return true;
@@ -42,15 +25,31 @@ public class GuessNumber {
         return false;
     }
 
-    public void showArrayNumbers(Player player) {
-        System.out.println("Числа игрока " + player.getName());
-        for (int array : player.getNumbers()) {
-            System.out.print(array + " ");
-        }
+    private void inputNumber(Player player) {
+        System.out.println("Игрок " + player.getName() + " введите число");
+        number = scanner.nextInt();
+        player.setEnteredNumber(number);
     }
 
-    int number;
-    int randomNumber;
+    private boolean compareNumber(Player player) {
+        if(number == randomNumber) {
+            System.out.println("Ура! Игрок " + player.getName() + " победил!");
+            return true;
+        }
+        if (number > randomNumber) {
+            System.out.println("Ваше число больше загаданного");
+        } else if (number < randomNumber) {
+            System.out.println("Ваше число меньше загаданного");
+        }
+        return false;
+    }
+
+    private void showArrayNumbers(Player player) {
+        System.out.println("Числа игрока " + player.getName());
+        for (int num : player.getNumbers()) {
+            System.out.print(num + " ");
+        }
+    }
     public void start() {
         Random random = new Random();
         randomNumber = random.nextInt(100) + 1;
@@ -60,15 +59,15 @@ public class GuessNumber {
         secondPlayer.setCount(0);
         secondPlayer.arraysFill();
         do {
-            enterNumPlayer(firstPlayer);
-            if(numberCheck(firstPlayer)) {
+            inputNumber(firstPlayer);
+            if(compareNumber(firstPlayer)) {
                 break;
             }
-            enterNumPlayer(secondPlayer);
-            if(numberCheck(secondPlayer)) {
+            inputNumber(secondPlayer);
+            if(compareNumber(secondPlayer)) {
                 break;
             }
-        } while (!countCheck(firstPlayer) || !countCheck(secondPlayer));
+        } while (!checkCount(firstPlayer) || !checkCount(secondPlayer));
 
         showArrayNumbers(firstPlayer);
         System.out.println("\n");
