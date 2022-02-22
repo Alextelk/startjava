@@ -33,7 +33,7 @@ public class Player {
         this.count = count;
     }
 
-    public void arraysFill() {
+    public void reset() {
         Arrays.fill(numbers, 0, count, 0);
     }
 }

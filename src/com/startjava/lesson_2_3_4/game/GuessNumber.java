@@ -38,9 +38,9 @@ public class GuessNumber {
         randomNumber = random.nextInt(100) + 1;
         System.out.println("\n" + "Я загадал число от 0 до 100, попробуй угадать. У каждого игрока по 10 попыток");
         firstPlayer.setCount(0);
-        firstPlayer.arraysFill();
+        firstPlayer.reset();
         secondPlayer.setCount(0);
-        secondPlayer.arraysFill();
+        secondPlayer.reset();
     }
 
     private void inputNumber(Player player) {
